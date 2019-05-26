@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector('#board .create-column').addEventListener('click', function () {
         let name = prompt('Enter a column name');
-        let column = new Column(name);
+        let column = new Column(name || 'Unnamed');
         board.addColumn(column);
     });
 

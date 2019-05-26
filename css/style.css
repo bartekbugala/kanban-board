@@ -8,6 +8,7 @@
 body {
   background-color: white;
   background-image: url(../images/bamboo-whisk-bowls-color-461428.jpg);
+  /*background-image: url(https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg);*/
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -20,7 +21,7 @@ h1 {
   text-align: center;
   background-color: #854d27;
   border: 1px solid #2e1f27;
-  width: 450px;
+  max-width: 450px;
   margin: 10px auto 0 auto;
   padding: 10px;
   border-radius: 20px 20px 0 0;
@@ -74,6 +75,8 @@ h1 span {
 .board .column-container {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .board .column-container > div {
@@ -165,16 +168,5 @@ h1 span {
 
 .board .column-container > div .column .column-card-list li:hover {
   cursor: grab;
-}
-
-@media (max-width: 767px) {
-  .board .column-container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .board .column-container > .column-wrapper {
-    -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-  }
 }
 /*# sourceMappingURL=style.css.map */
