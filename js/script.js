@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // here we will put the code of our application
 
     function randomString() {
         let chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
