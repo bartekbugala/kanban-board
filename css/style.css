@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam|Shojumaru|Boogaloo&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  background-image: url(../images/bamboo-whisk-bowls-color-461428.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  display: block;
+  color: #dfe299;
+  text-align: center;
+  background-color: #854d27;
+  border: 1px solid #2e1f27;
+  width: 450px;
+  margin: 10px auto 0 auto;
+  padding: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
+h1 span {
+  font-family: "Shojumaru", cursive;
+  font-weight: 500;
+}
+
+.board {
+  color: #2e1f27;
+  background-color: #e5d5bfaf;
+  border: 1px solid #2e1f27;
+  padding: 20px;
+  display: block;
+  min-height: 500px;
+}
+
+.board button {
+  padding: 5px;
+  border: none;
+  box-shadow: none;
+  border: 1px solid #2e1f27;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  color: #2e1f27;
+  transition: background-color linear 0.2s, color linear 0.2s;
+  box-shadow: 2px 2px 3px #6d6d6d;
+  font-family: "Boogaloo", cursive;
+  text-transform: lowercase;
+  font-size: 20px;
+}
+
+.board button:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.board .create-column {
+  display: block;
+  width: 150px;
+  margin: 0 auto 10px auto;
+}
+
+.board .create-column:before {
+  content: "+";
+  float: left;
+}
+
+.board .column-container {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.board .column-container > div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 1 calc(100% / 3);
+      flex: 1 1 calc(100% / 3);
+  padding: 10px;
+  min-height: 400px;
+}
+
+.board .column-container > div .column {
+  border: 1px solid #2e1f27;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
+  height: 100%;
+  background-color: #e9e8d8;
+  padding-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 8px #6d6d6d;
+  background-image: linear-gradient(20deg, #f4c95d, #e9e8d8);
+}
+
+.board .column-container > div .column h2 {
+  background-color: #854d27;
+  text-align: center;
+  color: #dfe299;
+  padding: 5px;
+  font-family: "Shojumaru", cursive;
+  font-weight: 500;
+}
+
+.board .column-container > div .column .btn-delete {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  line-height: 6px;
+  padding: 0 2px 2px 2px;
+  position: absolute;
+  vertical-align: middle;
+  right: 8px;
+  top: 8px;
+  font-size: 18px;
+}
+
+.board .column-container > div .column .add-card {
+  width: 150px;
+  margin: 10px auto 0 auto;
+  -ms-flex-order: 1;
+      order: 1;
+  position: relative;
+}
+
+.board .column-container > div .column .add-card:before {
+  content: "+";
+  float: left;
+}
+
+.board .column-container > div .column .column-card-list {
+  -ms-flex-order: 2;
+      order: 2;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  list-style: none;
+  min-height: 80%;
+}
+
+.board .column-container > div .column .column-card-list li {
+  background-color: #dfe299;
+  border: 1px solid #2e1f27;
+  margin: 20px;
+  position: relative;
+  min-height: 50px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px #6d6d6d;
+  border-radius: 0 10px 0 10px;
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.board .column-container > div .column .column-card-list li:hover {
+  cursor: grab;
+}
+
+@media (max-width: 767px) {
+  .board .column-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .board .column-container > .column-wrapper {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function generateTemplate(name, data, basicElement) {
         let template = document.getElementById(name).innerHTML;
         let element = document.createElement(basicElement || 'div');
+        element.classList.add('column-wrapper');
 
         Mustache.parse(template);
         element.innerHTML = Mustache.render(template, data);
@@ -79,16 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     function initSortable(id) {
-        var el = document.getElementById(id);
-        var sortable = Sortable.create(el, {
+        let el = document.getElementById(id);
+        let sortable = Sortable.create(el, {
             group: 'kanban',
             sort: true
         });
     }
 
     document.querySelector('#board .create-column').addEventListener('click', function () {
-        var name = prompt('Enter a column name');
-        var column = new Column(name);
+        let name = prompt('Enter a column name');
+        let column = new Column(name);
         board.addColumn(column);
     });
 
