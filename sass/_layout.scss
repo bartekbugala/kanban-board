@@ -7,6 +7,7 @@
 body {
   background-color: white;
   background-image: url(../images/bamboo-whisk-bowls-color-461428.jpg);
+  /*background-image: url(https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg);*/
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -143,66 +144,3 @@ h1 {
     }
   }
 }
-
-@media (max-width: 767px) {
-  .board .column-container {
-    flex-wrap: wrap;
-    > .column-wrapper {
-      flex: 0 0 100%;
-    }
-  }
-}
-
-// @for $i from 1 through 12 {
-//    .col-#{$i} {
-//      $width: 100% / 12 * $i;
-//      flex: 0 0 $width;
-//      max-width: $width;
-//    }
-//  }
-//  @mixin grid($prefix) {
-//    @for $i from 1 through 12 {
-//      .col-#{$prefix}-#{$i} {
-//        $width: 100% / 12 * $i;
-//        flex: 0 0 $width;
-//        max-width: $width;
-//      }
-//    }
-//  }
-//
-
-//
-//
-//@include grid('xs');
-//@include grid('sm');
-//@include grid('md');
-//@include grid('lg');
-//@include grid('xl');
-//
-
-// Variables
-// $body-background-color: #f5f5f2;
-//
-// ===================
-// Classic Flex for Sass
-//.row {
-//    width: 100%;
-//    &::before,
-//    &::after {
-//      content: "";
-//      display: table;
-//      clear: both;
-//    }
-//
-//    [class*="col-"] {
-//      float: left;
-//    }
-//
-//    @for $i from 1 through 12 {
-//      .col-#{$i},
-//      .col-offset-#{$i} {
-//        $width: 100% / 12 * $i;
-//        width: $width;
-//      }
-//    }
-//  }
