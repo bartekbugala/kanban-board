@@ -15,8 +15,16 @@
       <button class="create-column">Add a column</button>
       <div class="column-container"></div>
     </div>
+    <script id="class-template" type="text/x-tmpl-mustache">
+      <div class="column">
+          <h2 class="column-title">{{ name }}</h2>
+          <ul id={{ id }} class="column-card-list"></ul>
+          <button class="btn-delete">x</button>
+          <button class="add-card">Add a card</button>
+      </div>
+    </script>
     <script id="column-template" type="text/x-tmpl-mustache">
-      <div class="column col-4 col-sm-4">
+      <div class="column">
           <h2 class="column-title">{{ name }}</h2>
           <ul id={{ id }} class="column-card-list"></ul>
           <button class="btn-delete">x</button>
