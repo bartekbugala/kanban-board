@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-
+/*
+    // OGÓLNA FUNKCJA
     function randomString() {
         let chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
         let str = '';
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return element;
     }
-
+*//*
     function Column(name) {
         let self = this;
 
@@ -45,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
         removeColumn: function () {
             this.element.parentNode.removeChild(this.element);
         }
-    };
-
+    };*/
+/*
     function Card(description) {
         let self = this;
 
@@ -68,7 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
             this.element.parentNode.removeChild(this.element);
         }
     }
-
+    */
+/*
     let board = {
         name: 'Kanban Board',
         addColumn: function (column) {
@@ -91,7 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let column = new Column(name || 'Unnamed');
         board.addColumn(column);
     });
-
+*/
+/*
     // CREATING COLUMNS
     let todoColumn = new Column('To do');
     let doingColumn = new Column('Doing');
@@ -109,6 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // ADDING CARDS TO COLUMNS
     todoColumn.addCard(card1);
     doingColumn.addCard(card2);
-
+*/
 
 });
