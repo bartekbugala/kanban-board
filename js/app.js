@@ -1,46 +1,41 @@
-const baseUrl = 'https://kodilla.com/pl/bootcamp-api';
+// CORS fix
+const prefix = "https://cors-anywhere.herokuapp.com/";
+const baseUrl = "https://kodilla.com/pl/bootcamp-api";
 const myHeaders = {
-  'X-Client-Id': 'X-Client-Id',
-  'X-Auth-Token': 'X-Auth-Token'
+  "X-Client-Id": "4058",
+  "X-Auth-Token": "7d10d2376dc2b0842f29fefd93eda957"
 };
 
+fetch(prefix + baseUrl + "/board", { headers: myHeaders })
+  .then(function(resp) {
+    return resp.json();
+  })
+  .then(function(resp) {
+    setupColumns(resp.columns);
+  });
 
+function setupColumns(columns) {
+  columns.forEach(function(column) {
+    let col = new Column(column.id, column.name);
+    board.addColumn(col);
+    setupCards(col, column.cards);
+  });
+}
 
-// OGÓLNA FUNKCJA
-function randomString() {
-    let chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
-    let str = '';
-    for (let i = 0; i < 10; i++) {
-        str += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return str;
+function setupCards(col, cards) {
+  cards.forEach(function(card) {
+    let cardObj = new Card(card.id, card.name);
+    col.addCard(cardObj);
+  });
 }
 
 function generateTemplate(name, data, basicElement) {
-    let template = document.getElementById(name).innerHTML;
-    let element = document.createElement(basicElement || 'div');
-    element.classList.add('column-wrapper');
+  let template = document.getElementById(name).innerHTML;
+  let element = document.createElement(basicElement || "div");
+  element.classList.add("column-wrapper");
 
-    Mustache.parse(template);
-    element.innerHTML = Mustache.render(template, data);
+  Mustache.parse(template);
+  element.innerHTML = Mustache.render(template, data);
 
-    return element;
+  return element;
 }
-
- // CREATING COLUMNS
- let todoColumn = new Column('To do');
- let doingColumn = new Column('Doing');
- let doneColumn = new Column('Done');
-
- // ADDING COLUMNS TO THE BOARD
- board.addColumn(todoColumn);
- board.addColumn(doingColumn);
- board.addColumn(doneColumn);
-
- // CREATING CARDS
- let card1 = new Card('New task');
- let card2 = new Card('Create kanban boards');
-
- // ADDING CARDS TO COLUMNS
- todoColumn.addCard(card1);
- doingColumn.addCard(card2);
