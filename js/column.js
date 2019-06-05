@@ -14,7 +14,7 @@ function Column(id, name) {
       let cardName = prompt("Enter the name of the card");
       event.preventDefault();
 
-      fetch(prefix + baseUrl + "/card", {
+      /*fetch(prefix + baseUrl + "/card", {
         method: "POST",
         body: {
           //body query
@@ -27,8 +27,10 @@ function Column(id, name) {
           //create a new client side card
           let data = new FormData();
           data.append("name", cardName);
+          data.append("bootcamp_kanban_column_id", self.id);*/
+          let data = new FormData();
+          data.append("name", cardName || Card.name);
           data.append("bootcamp_kanban_column_id", self.id);
-
           fetch(prefix + baseUrl + "/card", {
             method: "POST",
             headers: myHeaders,
@@ -41,7 +43,7 @@ function Column(id, name) {
               let card = new Card(resp.id, cardName);
               self.addCard(card);
             });
-        });
+        /*});*/
     }
   });
 }

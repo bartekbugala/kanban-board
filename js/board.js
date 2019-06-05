@@ -19,7 +19,7 @@ document.querySelector("#board .create-column").addEventListener("click", functi
   let name = prompt("Enter a column name");
   let data = new FormData();
 
-  data.append("name", name);
+  data.append("name", name || Column.name);
 
   fetch(prefix + baseUrl + "/column", {
     method: "POST",
