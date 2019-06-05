@@ -5,6 +5,7 @@ const myHeaders = {
   "X-Client-Id": "4058",
   "X-Auth-Token": "7d10d2376dc2b0842f29fefd93eda957"
 };
+const noName = "No name given"; 
 
 fetch(prefix + baseUrl + "/board", { headers: myHeaders })
   .then(function(resp) {

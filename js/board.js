@@ -17,9 +17,11 @@ function initSortable(id) {
 
 document.querySelector("#board .create-column").addEventListener("click", function() {
   let name = prompt("Enter a column name");
+  if (name === null) {
+    return;
+  }
   let data = new FormData();
-
-  data.append("name", name || Column.name);
+  data.append("name", name || noName);
 
   fetch(prefix + baseUrl + "/column", {
     method: "POST",

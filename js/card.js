@@ -2,7 +2,7 @@ function Card(id, name) {
   let self = this;
 
   this.id = id;
-  this.name = name || "No name given";
+  this.name = name || noName;
   this.element = generateTemplate("card-template", { description: this.name }, "li");
 
   this.element.querySelector(".card").addEventListener("click", function(event) {
