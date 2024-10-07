@@ -1,6 +1,6 @@
-# Kanban Board
-Only Frontend (JS, HTML, Sass)
-### https://bartekbugala.github.io/kanban/
+# Kanban Board - Layout
 
-With external API (Kodilla)
-### https://bartekbugala.github.io/kanban-board/
+Sole Frontend (JS, HTML, Sass)
+A training app made arround 2019
+
+[Link](https://bartekbugala.github.io/kanban/)
